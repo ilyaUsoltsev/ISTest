@@ -1,0 +1,21 @@
+.container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form-field {
+    margin: 10px;
+}
+
+button {
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background-color: rgb(206, 94, 94);
+    color: white;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+

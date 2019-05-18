@@ -1,0 +1,54 @@
+<!-- <div class="topnav">
+  <div class="wrapper">
+  <a class="active" [routerLink]="['/']">Test</a>
+      <div *ngIf="isLoggedIn" class="login-container">
+        <button (click)="toggleChevron()" id="toggle" *ngIf="scrWidth < 600">
+          <i class="fas fa-chevron-up" [ngClass]="{'open': toggleArrow}"></i>
+          <div class="dropdown-content" [ngClass]="{'show': toggleArrow }">
+              <a style="cursor:default">Ivan Ivanov</a>
+              <a (click)="onLogout()">Logout</a>
+          </div>
+        </button>
+          <img src="./assets/img.png">
+          <button (click)="onLogout()" *ngIf="scrWidth >= 600">Logout</button>
+          <span *ngIf="scrWidth >= 600">Ivan Ivanov</span>
+      </div>
+      <div *ngIf="!isLoggedIn" class="login-container">
+          <button (click)="onLogin()">Login</button>
+          
+          
+      </div>
+  </div>
+
+</div> -->
+
+<ul>
+    <li class="logo"><a [routerLink]="['/']">Test</a></li>
+    <ng-container *ngIf="isLoggedIn">
+      <li class="dropdown" *ngIf="scrWidth < 600">
+        <a class="dropbtn" (click)="toggleChevron()">
+          <i class="fas fa-chevron-up" [ngClass]="{'open': toggleArrow}"></i>
+        </a>
+        <div class="dropdown-content" [ngClass]="{'show': toggleArrow }">
+          <a style="cursor:default">Ivan Ivanov</a>
+          <a (click)="onLogout()">Logout</a>
+        </div>
+      </li>
+      <li>
+        <a (click)="onLogout()" *ngIf="scrWidth >= 600">Logout</a>
+      </li>
+      <li>
+        <a style="cursor:default" *ngIf="scrWidth >= 600">Ivan Ivanov</a>
+      </li>
+      <li>
+        <a id="image" style="cursor:default">
+          <img src="./assets/img.png" alt="">
+        </a>
+      </li>
+    </ng-container>
+    <ng-container *ngIf="!isLoggedIn">
+        <li>
+            <a (click)="onLogin()">Login</a>
+        </li>
+    </ng-container>  
+</ul>

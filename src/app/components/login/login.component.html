@@ -1,0 +1,22 @@
+<div class="container">
+  <p>Для входа: email: "eve.holt@reqres.in",
+      пароль: "cityslicka"</p>
+  <form [formGroup]="form">
+        <div class="form-field">
+
+            <input name="email" formControlName="email" placeholder="email" >
+        </div>
+        <div class="form-field">
+            <input name="password" formControlName="password" 
+                  placeholder="пароль"
+                  
+                   type="password">
+        </div>
+  
+    <div class="form-buttons">
+        <button class="button button-primary" 
+                (click)="login()">Login</button>
+    </div>
+  </form>
+</div>
+
